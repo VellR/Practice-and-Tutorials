@@ -1,8 +1,12 @@
-public class ConcreteObserver{
+public class ConcreteObserver extends Observer{
 
-  boolean observerState;
+  public ConcreteObserver(Subject subject){
+    this.subject = subject;
+    this.subject.attach(this);
+  }
 
+  @Override
   public void update(){
-    //subject -> getState()
+    System.out.println("State: " + subject.getState());
   }
 }

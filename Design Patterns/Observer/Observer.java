@@ -1,9 +1,6 @@
-public class Observer{
+public abstract class Observer{
 
-  String word;
-  int num;
+  protected Subject subject;
 
-  public void update(){
-
-  }
+  public abstract void update();
 }
